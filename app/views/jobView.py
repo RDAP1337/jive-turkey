@@ -5,7 +5,6 @@ from app.models.jobModel import Job
 
 @app.route('/jobs', methods=['GET', 'POST'])
 def jobs():
-    jobs = Job.query.all()
     return render_template(
         'dash/jobs.html',
         subtitle = 'Jobs Summary',

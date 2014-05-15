@@ -1,7 +1,7 @@
 # ===================================================================
 # App Kernel - kernel.py
 # ===================================================================
-#!/usr/bin/env python2
+#!/usr/bin/env python2.7
 
 # define app structure
 from app import app
