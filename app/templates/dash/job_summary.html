@@ -1,0 +1,26 @@
+{% extends "dash/index.html" %}
+{% block job_summary %}
+<table class="table table-striped table-hover">
+    <thead>
+    <tr>
+        <td>Jobs Summary</td><td>Quantity</td><td>Premium</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>All</td><td>{{ all_quantity }}</td><td>{{ all_premium }}</td>
+    </tr>
+    <tr>
+        <td>Open</td><td>{{ open_quantity }}</td><td>{{ open_premium }}</td>
+    </tr>
+    <tr>
+        <td>Closed</td><td>{{ closed_quantity }}</td><td>{{ closed_premium }}</td>
+    </tr>
+    </tbody>
+    <tfoot>
+    <tr>
+        <td></td>
+    </tr>
+    </tfoot>
+</table>
+{% endblock %}

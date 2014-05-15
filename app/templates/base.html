@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="with=device-width, initial-scale=1">
+
+    <title>Jive Turkey - {{ subtitle }}</title>
+
+    {% block styles %}
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.1.1/{{ theme }}/bootstrap.min.css">
+    <link rel="stylesheet" href="static/css/base.css">
+    {% block more_styles %}{% endblock %}
+    {% endblock %}
+
+    {% block head_scripts %}{% endblock %}
+
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    {% endblock %}
+</head>
+<body>
+    {% block body %}
+
+    {% block layout %}{% endblock %}
+
+    {% block footer_scripts%}
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    {% block additional_script %}{% endblock %}
+    <script type='text/javascript'>
+        $(document).ready(function() {
+            $('[data-toggle=offcanvas]').click(function() {
+                $('.row-offcanvas').toggleClass('active');
+            });
+        });
+    </script>
+    {% endblock %}
+
+{% endblock %}
+</body>
+</html>
